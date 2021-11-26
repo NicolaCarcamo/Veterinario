@@ -15,6 +15,7 @@
   <%= @pet.birthdate %>
 </p>
 
+<%= link_to 'Pet history', pet_pet_histories_path(@pet) %>
 
 <table>
   <thead>
@@ -28,10 +29,10 @@
 
   <tbody>
     <tr>
-      <td><%= @pet.avg_weight %></td>
-      <td><%= @pet.avg_height %></td>
-      <td><%= @pet.max_weight %></td>
-      <td><%= @pet.max_height%></td>
+      <td><%= @pet.avg_weight %> kg</td>
+      <td><%= @pet.avg_height %> cm</td>
+      <td><%= @pet.max_weight %> kg</td>
+      <td><%= @pet.max_height%> cm</td>
     </tr>
   </tbody>
 </table>

@@ -10,23 +10,27 @@ class Pet < ApplicationRecord
   end
 
   def history_count
-    #TODO-implement
+    pet_histories.count
   end
 
   def avg_weight
-    #TODO-implement
+    if pet_histories.count > 0
+      (pet_histories.sum(:weight) / pet_histories.count).round(2)
+    end
   end
 
   def avg_height
-    #TODO-implement
+    if pet_histories.count > 0
+      (pet_histories.sum(:heigth).to_f / pet_histories.count).round(2)
+    end
   end
 
   def max_weight
-    #TODO-implement
+    pet_histories.pluck(:weight).max
   end
 
   def max_height
-    #TODO-implement
+    pet_histories.pluck(:heigth).max
   end
 
 end

@@ -5,11 +5,14 @@ class PetsController < ApplicationController
   # GET /pets.json
   def index
     @pets = Pet.all
+    @pet_histories = PetHistory.where(params[:pet_id])
   end
 
   # GET /pets/1
   # GET /pets/1.json
   def show
+    @pet = Pet.find(params[:id])
+    @pet_histories = PetHistory.where(params[:pet_id])
   end
 
   # GET /pets/new
