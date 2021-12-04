@@ -20,15 +20,15 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Altura Máxima</th>
       <th>Peso Máximo</th>
+      <th>Altura Máxima</th>
     </tr>
   </thead>
 
   <tbody>
     <% @pets.each do |pet| %>
       <tr>
-        <td><%= pet.to_s %></td>
+        <td><%= @client.pets.name %></td>
         <td><%= pet.max_weight %> kg</td>
         <td><%= pet.max_height%> cm</td>
       </tr>
