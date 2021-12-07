@@ -28,7 +28,7 @@
   <tbody>
     <% @pets.each do |pet| %>
       <tr>
-        <td><%= @client.pets.name %></td>
+        <td><%= pet.name %></td>
         <td><%= pet.max_weight %> kg</td>
         <td><%= pet.max_height%> cm</td>
       </tr>
