@@ -22,7 +22,7 @@ class Pet < ApplicationRecord
 
   def avg_height
     if pet_histories.count > 0
-      (pet_histories.sum(:heigth).to_f / pet_histories.count).round(2)
+      (pet_histories.sum(:height) / pet_histories.count).round(2)
     end
   end
 
@@ -31,7 +31,7 @@ class Pet < ApplicationRecord
   end
 
   def max_height
-    pet_histories.pluck(:heigth).max
+    pet_histories.pluck(:height).max
   end
 
 end

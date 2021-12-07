@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_28_173000) do
+ActiveRecord::Schema.define(version: 2021_12_07_145934) do
 
   create_table "clients", force: :cascade do |t|
     t.string "firstname"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2021_11_28_173000) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "pet_id", null: false
+    t.float "height"
     t.index ["pet_id"], name: "index_pet_histories_on_pet_id"
   end
 
@@ -38,7 +39,7 @@ ActiveRecord::Schema.define(version: 2021_11_28_173000) do
     t.date "birthdate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "client_id", null: false
+    t.integer "client_id"
     t.index ["client_id"], name: "index_pets_on_client_id"
   end
 

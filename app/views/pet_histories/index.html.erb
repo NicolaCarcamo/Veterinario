@@ -17,7 +17,7 @@
     <% @pet_histories.each do |pet_history| %>
       <tr>
         <td><%= pet_history.weight %></td>
-        <td><%= pet_history.heigth %></td>
+        <td><%= pet_history.height %></td>
         <td><%= pet_history.description %></td>
         <td><%= link_to 'Show', client_pet_pet_history_path(@client, @pet, pet_history) %></td>
         <td><%= link_to 'Edit', edit_client_pet_pet_history_path(@client, @pet, pet_history) %></td>
